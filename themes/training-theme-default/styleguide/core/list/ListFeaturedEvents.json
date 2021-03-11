@@ -1,0 +1,12 @@
+{
+  "_wrapper": "/_wrapper.previewAtomic.json",
+  "_devNote": "BECAUSE WE REGISTER THIS AS LIST STYLE THE SCHEMA IS THAT OF LIST.JSON",
+  "_template": "/core/list/ListFeaturedEvents.hbs",
+  "title": "My Featured Events List",
+  "items": [
+    {
+      "_include": "/core/promo/PromoC.json",
+      "_repeat": 5
+    }
+  ]
+}

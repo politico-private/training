@@ -97,6 +97,10 @@
       "hideTabs": true,
       "pages": [
         {
+          "name": "List Featured Events",
+          "content": "/core/list/ListFeaturedEvents.html"
+        },
+        {
           "name": "List A",
           "content": "/core/list/ListA.html"
         },

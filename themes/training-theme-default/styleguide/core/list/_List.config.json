@@ -8,6 +8,12 @@
       ],
       "templates": [
         {
+          "displayName": "List Featured Events",
+          "example": "/core/list/ListFeaturedEvents.json",
+          "height": 500,
+          "width": 800
+        },
+        {
           "displayName": "List A",
           "example": "/core/list/ListA.json",
           "height": 500,

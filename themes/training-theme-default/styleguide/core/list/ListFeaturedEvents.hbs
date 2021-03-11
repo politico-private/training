@@ -1,0 +1,15 @@
+{{!observe how the css classnames use the key of data as a suffix in the name... class="ModuleName-key"}}
+<div class="ListFeaturedEvents">
+    <h1 class="ListFeaturedEvents-title">{{title}}</h1> {{!--using h1 for simplicity but please observe some themes
+    actually use an include file that has prettier markup for module headings--}}
+
+    {{#with items}} {{!go into the context of items}}
+    <ul class="ListFeaturedEvents-items">
+        {{#each this}} {{!now inside the context this refers to each item}}
+            <li class="ListFeaturedEvents-items-item">
+                {{this}}  {{!print the object for each item...likely a promo object}}
+            </li>
+        {{/each}}
+    </ul>
+    {{/with}}
+</div>
