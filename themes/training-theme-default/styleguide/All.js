@@ -1,6 +1,9 @@
 /* eslint-disable no-new */
 import './All.less'
 
+/**
+ * Original Brightspot components
+ */
 import { ActionBar } from 'actionbar'
 import { Banner } from 'banner'
 import { Carousel } from 'carousel'
@@ -20,6 +23,17 @@ import { YouTubeVideoPlayer } from 'youTubeVideoPlayer'
 import { VimeoVideoPlayer } from 'vimeoVideoPlayer'
 import { VideoPlaylist } from 'videoPlaylist'
 
+/**
+ * Setup Vue.js support
+ */
+import Vue from 'vue'
+import vueCustomElement from 'vue-custom-element'
+
+/**
+ * New Vue.js components
+ */
+import Signup from './signup/Signup.vue'
+
 function registerCustomElements () {
   window.customElements.define('ps-actionbar', ActionBar)
   window.customElements.define('ps-banner', Banner)
@@ -37,8 +51,12 @@ function registerCustomElements () {
   window.customElements.define('ps-youtubeplayer', YouTubeVideoPlayer)
   window.customElements.define('ps-vimeoplayer', VimeoVideoPlayer)
   window.customElements.define('ps-video-playlist', VideoPlaylist)
+
   new GoogleDfp()
   new LazyLoadImages()
+
+  Vue.use(vueCustomElement)
+  Vue.customElement('politico-signup', Signup)
 }
 
 if (document.readyState === 'loading') {

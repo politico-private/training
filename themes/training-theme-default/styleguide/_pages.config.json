@@ -93,6 +93,16 @@
       ]
     },
     {
+      "name": "Modules",
+      "hideTabs": true,
+      "pages": [
+        {
+          "name": "Signup",
+          "content": "/signup/Signup.html"
+        }
+      ]
+    },
+    {
       "name": "Lists",
       "hideTabs": true,
       "pages": [
