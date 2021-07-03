@@ -1,4 +1,5 @@
 const path = require('path')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
   entry: {
@@ -15,11 +16,23 @@ module.exports = {
     rules: [
       // Split out large binary files into separate chunks.
       {
-        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        test: /\.(png|jpg|gif|eot|ttf|woff|woff2)$/,
         loader: 'url-loader',
         options: {
           limit: 10000
         }
+      },
+
+      // Convert SVG into Vue.js component
+      {
+        test: /\.svg$/,
+        loader: 'vue-svg-loader'
+      },
+
+      // Add Vue.js
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       },
 
       // Transpile JS.
@@ -30,6 +43,8 @@ module.exports = {
       }
     ]
   },
+
+  plugins: [new VueLoaderPlugin()],
 
   resolve: {
     alias: {

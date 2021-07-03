@@ -1,0 +1,9 @@
+{
+  "_template": "Signup.hbs",
+
+  "label": "Label",
+  "dek": "Dek",
+  "image": {
+    "_include": "/core/image/Image.json"
+  }
+}

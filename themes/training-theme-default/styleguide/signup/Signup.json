@@ -1,0 +1,8 @@
+{
+  "_template": "Signup.hbs",
+  "label": "Huddle",
+  "dek": "A play-by-play preview of the day's congressional news",
+  "image": {
+     "_include": "/core/image/Image.json"
+   }
+}
